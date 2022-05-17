@@ -1,15 +1,16 @@
 import React, {useState} from 'react';
 import styles from './navbar.module.css'
-import useFetchData from '../hooks/fetchData';
 
 
 //export default 
 function Navbar(props) {
-    const {selected, setSelected, open, setOpen} = props
+    const {selected, 
+        open, 
+        setOpen,
+        loading,
+        error,
+    } = props
 
-    const countriesUrl = 'https://covid19.mathdro.id/api/countries'
-    const {data, loading, error} = useFetchData(countriesUrl)
-    
     console.log(open)
     if (error){
         return <div>
