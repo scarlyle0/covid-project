@@ -1,17 +1,14 @@
-import React, { useState } from "react";
+//import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 
 function App() {
-  const [boool, setBoool] = useState(true)
-  const name = "yes"
+
   return (
     <div className="App">
-      {boool ? name : "not true"}
-      <div
-      onClick={() => setBoool(!boool)}>
-        <h1>changeBool </h1>
-      </div>
-      <Navbar></Navbar>
+      Hello my name is 
+      <i style = {{fontSize: '10rem', color: 'blue' }}
+      className="fa-solid fa-arrows-down-to-people"></i>
+      <Navbar/>
     </div>
   );
 }

@@ -1,9 +1,12 @@
 import React from 'react';
+import styles from './navbar.module.css'
 
-function Navbar() {
+//export default 
+function Navbar(props) {
+
     return (
-        <div>
-            I am the best
+        <div className={`${styles.navbar} ${styles.secondStyle}`}>
+            Cartman 
         </div>
     );
 }
