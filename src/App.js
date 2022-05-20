@@ -9,10 +9,9 @@ function App() {
   const[selected, setSelected] = useState('Global')
   const[open, setOpen] = useState(false)
 
-  const countriesUrl = 'https://covid19.mathdro.id/api/countries'
+  const countriesUrl = 'https://covid-api.mmediagroup.fr/v1/cases'
   const {data, loading, error} = useFetchData(countriesUrl)
 
-  console.log(data)
   return (
     <div className="App">
       
@@ -20,8 +19,8 @@ function App() {
       loading = {loading} error = {error}/>
       {!loading && <main className="Main">
         {open ?
-        <Dropdown data = {data} setSelected = {setSelected}/> :
-        <Main/>
+        <Dropdown data = {data} setSelected = {setSelected} setOpen={setOpen}/> :
+        <Main selected = {selected} data = {data}/>
         }
       </main>}
     </div>
