@@ -7,4 +7,6 @@
 .Main{
     flex: 1;
     padding: 4px;
+    display: flex;
+    direction: column;
 }
