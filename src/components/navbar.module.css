@@ -12,10 +12,16 @@
     user-select: none;
     cursor: pointer;
     transition-duration: 300ms;
-    z-index: 20;
+    z-index: 2;
 
 }
 
 .navbar:hover{
     color: turquoise;
+}
+
+.subText{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
